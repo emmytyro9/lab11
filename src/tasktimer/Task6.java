@@ -10,7 +10,10 @@ public class Task6 implements Runnable{
 	// Limit number of words read.  Otherwise, the next task could be very sloooow.
 	static final int MAXCOUNT = 50_000;
 	private BufferedReader br = null;
-
+	
+	/**
+	 * initialize new instance
+	 */
 	public Task6() {
 		//initialize
 		try {
@@ -38,6 +41,9 @@ public class Task6 implements Runnable{
 		System.out.printf("Done appending %d words to StringBuilder.\n", count);
 	}
 	
+	/**
+	 * @return the string to show starting task
+	 */
 	public String toString() {
 		return "Starting task: append "+MAXCOUNT+" words to a StringBuilder" ;
 	}

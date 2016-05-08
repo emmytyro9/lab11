@@ -1,12 +1,13 @@
 package student;
 import java.time.LocalDate;
+import java.util.Comparator;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 /**
  * Display reminders of students having a birthday soon.
- * @author you
+ * @author Palita
  */
 public class StudentApp {
 
@@ -30,6 +31,7 @@ public class StudentApp {
 		LocalDate local = LocalDate.now();
 		Predicate<Student> fillter = a -> a.getBirthdate().getMonthValue() == local.getMonthValue() ;
 		Consumer<Student> action = a -> System.out.println(a.getFirstname() + " " + a.getLastname() + " will have birthday on " + a.getBirthdate().getDayOfMonth() + " " + a.getBirthdate().getMonth() + ".");
+		Comparator<Student> byName = (first,second) -> first.getFirstname().charAt(0) - second.getFirstname().charAt(0);
 		app.filterAndPrint(students, fillter , action);
 	}
 }

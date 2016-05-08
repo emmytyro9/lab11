@@ -13,6 +13,9 @@ public class Task4 implements Runnable{
 
 	private BufferedReader br = null;
 
+	/**
+	 * initialize new instance
+	 */
 	public Task4() {
 		try {
 			br = new BufferedReader( new InputStreamReader(Dictionary.getWordsAsStream()) );
@@ -55,7 +58,10 @@ public class Task4 implements Runnable{
 		out.printf("Average length of %,d words is %.2f\n", count, averageLength );
 
 	}
-
+	
+	/**
+	 * @return the string to show starting task
+	 */
 	public String toString() {
 		return "Starting task: read words using BufferedReader and Stream with Collector" ;
 	}

@@ -55,6 +55,7 @@ public class Student {
 	}
 
 	/**
+	 * 
 	 * Get the student's ID.
 	 * @return the id
 	 */
@@ -68,7 +69,7 @@ public class Student {
 	 */
 	
 	private void setBirthdate(String datestr) {
-		birthdate = LocalDate.parse(datestr, DateTimeFormatter.ofPattern("dd/mm/yyyy")) ;
+		birthdate = LocalDate.parse(datestr, DateTimeFormatter.ofPattern("dd/MM/yyyy")) ;
 	}
 	
 	@Override

@@ -8,6 +8,9 @@ public class Task1 implements Runnable{
 	
 	private Scanner in ;
 	
+	/**
+	 * initialize new instance
+	 */
 	public Task1() {
 		in = new Scanner(Dictionary.getWordsAsStream());
 	}
@@ -31,7 +34,9 @@ public class Task1 implements Runnable{
 		out.printf("Average length of %,d words is %.2f\n", count, averageLength);
 		
 	}
-	
+	/**
+	 * @return the string to show starting task
+	 */
 	public String toString() {
 		return "Starting task: read words using Scanner and a while loop";
 	}

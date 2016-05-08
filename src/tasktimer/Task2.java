@@ -9,11 +9,10 @@ import java.io.InputStreamReader;
 public class Task2 implements Runnable{
 	
 	private BufferedReader br = null;
-	
+
 	/**
-	 * Process all the words in a file (one word per line) using BufferedReader
-	 * and the readLine() method.  readLine() returns null when there is no more input.
-	 * Display summary statistics and elapsed time.
+	 * initialize new instance
+	 *  @throws Exception if system could not open dictionary.
 	 */
 	public Task2() {
 		try {
@@ -23,7 +22,11 @@ public class Task2 implements Runnable{
 			return;
 		}
 	}
-
+	/**
+	 * Process all the words in a file (one word per line) using BufferedReader
+	 * and the readLine() method.  readLine() returns null when there is no more input.
+	 * Display summary statistics and elapsed time.
+	 */
 	@Override
 	public void run() {
 		// initialize: open the words file as InputStream
@@ -48,6 +51,9 @@ public class Task2 implements Runnable{
 
 	}
 	
+	/**
+	 * @return the string to show starting task
+	 */
 	public String toString() {
 		return "Starting task: read words using BufferedReader.readLine() with a loop";
 	}

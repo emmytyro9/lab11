@@ -13,6 +13,9 @@ public class Task3 implements Runnable{
 
 	private BufferedReader br = null;
 
+	/**
+	 * initialize new instance
+	 */
 	public Task3() {
 		try {
 			br = new BufferedReader( new InputStreamReader(Dictionary.getWordsAsStream()) );
@@ -53,7 +56,10 @@ public class Task3 implements Runnable{
 				counter.getCount(), counter.average() );
 
 	}
-
+	
+	/**
+	 * @return the string to show starting task
+	 */
 	public String toString() {
 		return "Starting task: read words using BufferedReader and Stream" ;
 	}

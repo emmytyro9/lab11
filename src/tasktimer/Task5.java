@@ -11,6 +11,9 @@ public class Task5 implements Runnable{
 	static final int MAXCOUNT = 50_000;
 	private BufferedReader br = null;
 
+	/**
+	 * initialize new instance
+	 */
 	public Task5() {
 		try {
 			br = new BufferedReader( new InputStreamReader(Dictionary.getWordsAsStream()) );
@@ -38,6 +41,9 @@ public class Task5 implements Runnable{
 		System.out.printf("Done appending %d words to string.\n", count);
 	}
 	
+	/**
+	 * @return the string to show starting task
+	 */
 	public String toString() {
 		return "Starting task: append "+MAXCOUNT+" words to a String using +" ;
 	}
