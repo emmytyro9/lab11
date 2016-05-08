@@ -33,5 +33,6 @@ public class StudentApp {
 		Consumer<Student> action = a -> System.out.println(a.getFirstname() + " " + a.getLastname() + " will have birthday on " + a.getBirthdate().getDayOfMonth() + " " + a.getBirthdate().getMonth() + ".");
 		Comparator<Student> byName = (first,second) -> first.getFirstname().charAt(0) - second.getFirstname().charAt(0);
 		app.filterAndPrint(students, fillter , action);
+		
 	}
 }
